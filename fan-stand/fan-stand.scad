@@ -2,6 +2,8 @@
 // A support structure for mounting a fan
 
 // Parameters
+resolution = 20; // Render resolution: use 20 for pixel looking or 200 for smooth
+
 baseWidthX = 200;  // Width of the base along X axis
 baseWidthY = 70;  // Width of the base along Y axis
 baseHeight = 50;  // Height of the half oval
@@ -21,7 +23,7 @@ module half_oval() {
     difference() {
         // Create full ellipsoid by stretching a sphere
         scale([baseWidthX/2, baseWidthY/2, baseHeight])
-            sphere(r=1, $fn=20);
+            sphere(r=1, $fn=resolution);
 
         // Cut away everything below z=0 (negative z)
         translate([-baseWidthX, -baseWidthY, -baseHeight-1])
@@ -42,10 +44,10 @@ module poles() {
     translate([-polesXDistance/2, leftPoleY, 0]) {
         difference() {
             union() {
-                cylinder(h=polesHeight, r=polesRadius, center=false, $fn=20);
+                cylinder(h=polesHeight, r=polesRadius, center=false, $fn=resolution);
                 // Dome on top
                 translate([0, 0, polesHeight])
-                    sphere(r=polesRadius, $fn=20);
+                    sphere(r=polesRadius, $fn=resolution);
             }
             // Rectangular cut for fan blade from top down (through dome)
             translate([-polesRadius-1, -cutWidth/2, polesHeight + polesRadius - fanCutDepth])
@@ -57,10 +59,10 @@ module poles() {
     translate([polesXDistance/2, rightPoleY, 0]) {
         difference() {
             union() {
-                cylinder(h=polesHeight, r=polesRadius, center=false, $fn=20);
+                cylinder(h=polesHeight, r=polesRadius, center=false, $fn=resolution);
                 // Dome on top
                 translate([0, 0, polesHeight])
-                    sphere(r=polesRadius, $fn=20);
+                    sphere(r=polesRadius, $fn=resolution);
             }
             // Rectangular cut for fan blade from top down (through dome)
             translate([-polesRadius-1, -cutWidth/2, polesHeight + polesRadius - fanCutDepth])
