@@ -10,6 +10,7 @@ Some scripts and 3D models for 3D printing.
 - jumping-spider-terrarium-bowl: an OpenSCAD script to create a half-cylinder bowl for a jumping spider terrarium with magnetic attachment points
 - jumping-spider-terrarium-cover: an OpenSCAD script to create a ventilated cover to place on top of the open part of a terrarium to prevent spider escape while working on other sections
 - jumping-spider-terrarium-stairs: an OpenSCAD script to create stairs for a jumping spider terrarium with magnetic attachment points
+- funnel: an OpenSCAD script to create a parametric funnel (top and bottom diameters, height and wall thickness)
 - lego-interface: a python script for Blender and OpenSCAD script to create any under or top connection for compatibility with Lego blocks
 - ramp: an OpenSCAD script to create a simple ramp for bridging floor gaps, useful for robot vacuums to move between rooms
 - toyota_echo_2005-cell_support: a FreeCAD model of a cell support to place over the radio in a Toyota Echo 2005 car
